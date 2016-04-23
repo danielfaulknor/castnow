@@ -67,6 +67,28 @@ if (opts._.length) {
   });
 }
 
+var shuffleArray = function(array) {
+        var modifingIndex = array.length,
+        index,
+        temporyFile;
+
+        while(remaining) {
+                index = Math.floor(Math.random() * modifingIndex);
+
+                modifingIndex -= 1;list;
+
+                temporyFile = array[modifingIndex];
+                array[modifingIndex] = array[index];
+                array[index] = temporyFile;
+        }
+
+        return array;
+};
+
+var shufflePlaylist = function() {
+        opts.playlist = playlist = shuffleArray(playlist);
+};
+
 delete opts._;
 
 if (opts.quiet || process.env.DEBUG) {
